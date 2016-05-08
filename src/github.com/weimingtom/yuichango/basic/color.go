@@ -115,14 +115,14 @@ func (self *Color) IsEqual(color *Color) bool {
     return self.R == color.R && 
 		self.G == color.G && 
 		self.B == color.B && 
-		self.A == color.A;
+		self.A == color.A
 }
 
 func (self *Color) IsNotEqual(color *Color) bool {
     return !(self.R == color.R && 
 		self.G == color.G && 
 		self.B == color.B && 
-		self.A == color.A);
+		self.A == color.A)
 }
 
 func (self *Color) String() string {
