@@ -126,13 +126,13 @@ func (self *Color) IsNotEqual(color *Color) bool {
 }
 
 func (self *Color) String() string {
-	return "Color [r = " +
+	return "Color [R = " +
 		strconv.Itoa(self.R) +
-		", g = " +
+		", G = " +
 		strconv.Itoa(self.G) +
-		", b = " +
+		", B = " +
 		strconv.Itoa(self.B) +
-		", a = " + 
+		", A = " + 
 		strconv.Itoa(self.A) + 
-		"]";
+		"]"
 }

@@ -49,28 +49,28 @@ func (self *Rectangle) SetAll(x_ int, y_ int,
 
 func (self *Rectangle) IsIntersecting(
 	rectangle *Rectangle) bool {
-    x_ := self.X;
-    y_ := self.Y;
-    width_ := self.Width;
-    height_ := self.Height;
-    x_ -= rectangle.X;
-    y_ -= rectangle.Y;
-    if (x_ < 0) {
-        width_ += x_;
-        x_ = 0;
-    } else if (x_ + width_ > rectangle.Width) {
-        width_ = rectangle.Width - x_;
+    x_ := self.X
+    y_ := self.Y
+    width_ := self.Width
+    height_ := self.Height
+    x_ -= rectangle.X
+    y_ -= rectangle.Y
+    if x_ < 0 {
+        width_ += x_
+        x_ = 0
+    } else if x_ + width_ > rectangle.Width {
+        width_ = rectangle.Width - x_
     }
-    if (y_ < 0) {
-        height_ += y_;
-        y_ = 0;
-    } else if (y_ + height_ > rectangle.Height) {
-        height_ = rectangle.Height - y_;
+    if y_ < 0 {
+        height_ += y_
+        y_ = 0
+    } else if y_ + height_ > rectangle.Height {
+        height_ = rectangle.Height - y_
     }
-    if (width_ <= 0 || height_ <= 0) {
-        return false;
+    if width_ <= 0 || height_ <= 0 {
+        return false
     }
-    return true;
+    return true
 }
 
 func (self *Rectangle) IsPointInRect(
@@ -82,10 +82,10 @@ func (self *Rectangle) IsPointInRect(
 }
 
 func (self *Rectangle) String() string {
-    return "Rectangle [x = " + strconv.Itoa(self.X) +
-    	", y = " + strconv.Itoa(self.Y) +
-        ", width = " + strconv.Itoa(self.Width) + 
-        ", height = " + strconv.Itoa(self.Height) +
-        "]";
+    return "Rectangle [X = " + strconv.Itoa(self.X) +
+    	", Y = " + strconv.Itoa(self.Y) +
+        ", Width = " + strconv.Itoa(self.Width) + 
+        ", Height = " + strconv.Itoa(self.Height) +
+        "]"
 }
 	
