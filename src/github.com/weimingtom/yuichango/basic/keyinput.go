@@ -1,8 +1,8 @@
 package yuichango
 
 const (
-    PRESSED = 0
-    RELEASED = 1
+    KeyInput_PRESSED = 0
+    KeyInput_RELEASED = 1
 )
 
 type KeyInput struct {
