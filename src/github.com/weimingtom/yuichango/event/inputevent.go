@@ -1,11 +1,15 @@
 package yuichango
 
+import (
+	. "github.com/weimingtom/yuichango/gui"
+)
+
 type InputEvent struct {
-	Event
+	*Event
     mShiftPressed bool
     mControlPressed bool
     mAltPressed bool
-    mMetaPresse bool
+    mMetaPressed bool
     mIsConsumed bool
 }
 
@@ -14,8 +18,9 @@ func NewInputEvent(source *Widget,
 	isShiftPressed bool,
 	isControlPressed bool,
 	isAltPressed bool,
-	isMetaPressed bool) {
-	e := NewEvent(source)
+	isMetaPressed bool) *InputEvent {
+	e := &InputEvent{}
+	e.Event = NewEvent(source)
     e.mShiftPressed = isShiftPressed
     e.mControlPressed = isControlPressed
     e.mAltPressed = isAltPressed
@@ -28,11 +33,11 @@ func (self *InputEvent) IsShiftPressed() bool {
 	return self.mShiftPressed;
 }
   
-func (self *InputEvent) IsControlPressed() {
+func (self *InputEvent) IsControlPressed() bool {
   	return self.mControlPressed;
 }
   
-func (self *InputEvent) IsAltPressed() {
+func (self *InputEvent) IsAltPressed() bool {
   	return self.mAltPressed;
 }
   
@@ -45,6 +50,6 @@ func (self *InputEvent) Consume() {
 }
   
 func (self *InputEvent) IsConsumed() bool {
-  	return mIsConsumed;
+  	return self.mIsConsumed;
 }
 
