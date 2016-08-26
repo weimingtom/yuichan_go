@@ -5,6 +5,8 @@ import (
 	. "github.com/weimingtom/yuichango/basic"
 	. "github.com/weimingtom/yuichango/event"
 	. "github.com/weimingtom/yuichango/gui"
+	. "github.com/weimingtom/yuichango/platform"	
+	. "github.com/weimingtom/yuichango/font"	
 )
 
 func main() {
@@ -23,5 +25,11 @@ func main() {
 	NewRectangle()
 	NewEvent(nil)
 	iEvn := NewInputEvent(&Widget{}, false, false, false, false)
-	fmt.Printf("%v\n", iEvn.GetSource());
+	fmt.Printf("%v\n", iEvn.GetSource())
+	NewKeyEvent(nil, false, false, false, false, 0, false, nil)
+	NewMouseEvent(nil, false, false, false, false, 0, 0, 0, 0, 0)
+	NewSelectEvent(nil)
+	
+	var f Font = &DefaultFont{}
+	f.GetWidth("")
 }
