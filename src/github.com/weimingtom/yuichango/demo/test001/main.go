@@ -7,6 +7,7 @@ import (
 	. "github.com/weimingtom/yuichango/gui"
 	. "github.com/weimingtom/yuichango/platform"	
 	. "github.com/weimingtom/yuichango/font"	
+	. "github.com/weimingtom/yuichango/widget"
 )
 
 func main() {
@@ -32,4 +33,8 @@ func main() {
 	
 	var f Font = &DefaultFont{}
 	f.GetWidth("")
+	
+	fmt.Printf("%s\n", FIXEDFONT_BIG_BMP);
+	
+	NewButton()
 }
